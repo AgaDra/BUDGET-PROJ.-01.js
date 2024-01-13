@@ -15,17 +15,6 @@ h1 {
   font-size: 100px;
   margin: 20px;
 }
-
-.main-page-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #000000;
-  opacity: 90%;
-}
-
 .navi {
   width: 100%;
   height: 50px;
@@ -42,7 +31,6 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
-
 .result {
   width: 700px;
   height: 200px;
@@ -57,7 +45,6 @@ h1 {
   font-size: 40px;
   background-color: rgb(6, 6, 6);
 }
-
 .fill-tiles {
   height: auto;
   display: flex;
@@ -88,4 +75,14 @@ input[type="text"] {
   color: white;
   background-color: #000000;
   border-radius: 20%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  opacity: 90%;
 }

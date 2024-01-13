@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="mobile.css" />
+
+    <title>HOME BUDGET</title>
+  </head>
+
+  <body>
+    <nav class="navi"></nav>
+    <header class="container">
+      <h1>BUDGET APP</h1>
+    </header>
+    <main class="container">
+      <section class="result">
+        <input
+          class="input-result"
+          type="text"
+          placeholder="You can still spend" />
+      </section>
+      <section class="fill-tiles">
+        <section class="fill-tile income">
+          <h2>Income</h2>
+          <div>
+            <input type="text" placeholder="Income name" />
+            <input type="number" placeholder="Amount" />
+            <button>Add</button>
+          </div>
+        </section>
+        <section class="fill-tile expences">
+          <h2>Expences</h2>
+        </section>
+      </section>
+    </main>
+    <div class="main-page-overlay"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

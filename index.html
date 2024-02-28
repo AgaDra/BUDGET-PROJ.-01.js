@@ -34,7 +34,7 @@
       </section>
       <section class="fill-tiles">
         <section class="fill-tile">
-          <h2 class="tiles-name">Income</h2>
+          <h2 class="tiles-name">Incomes</h2>
           <form id="formInc" class="fill-area">
             <input
               id="inputTextInc"
@@ -53,21 +53,13 @@
             <button id="btnAddInc" class="income-amount-cto">Add</button>
           </form>
           <div id="listWrapperInc" class="income-list-wrapper">
-            <ul id="listInc" class="income-list-ul">
-              <li class="income-list-item">
-                <span class="income-name-style">Income name</span>
-                <span class="income-amount-style">5000</span>
-                <div class="incOption">
-                  <button class="item-income-cto">edit</button>
-                  <button class="item-income-cto">
-                    <i class="fa-regular fa-trash-can fa-xl"></i>
-                  </button>
-                </div>
-              </li>
-            </ul>
+            <ul id="listInc" class="income-list-ul"></ul>
           </div>
           <div class="total-income">
-            <h2 class="total-name">Total income:</h2>
+            <h2 class="total-name">
+              Total income:
+              <span id="totalIncomes"></span>
+            </h2>
           </div>
         </section>
         <section class="fill-tile">

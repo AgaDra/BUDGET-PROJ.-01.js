@@ -16,21 +16,12 @@
   </head>
 
   <body class="background-image">
-    <nav class="navi">
-      <div class="navi-icon">
-        <i class="fas fa-bars fa-2xl"></i>
-        <i class="fas fa-gear fa-2xl"></i>
-      </div>
-    </nav>
     <header class="container">
       <h1 class="app-name">BUDGET APP</h1>
     </header>
     <main class="container">
-      <section class="date-tile">
-        <h2 class="date">Styczeń 2024</h2>
-      </section>
       <section class="result-tile">
-        <h2 class="tiles-name">You can still spend:</h2>
+        <h2 id="yourBudget" class="tiles-name"></h2>
       </section>
       <section class="fill-tiles">
         <section class="fill-tile">
@@ -50,12 +41,12 @@
               required
               min="0.01"
               step="0.01" />
-            <button id="btnAddInc" class="income-amount-cto">Add</button>
+            <button class="amount-cto">Add</button>
           </form>
-          <div id="listWrapperInc" class="income-list-wrapper">
-            <ul id="listInc" class="income-list-ul"></ul>
+          <div id="listWrapperInc" class="list-wrapper">
+            <ul id="listInc" class="list-ul"></ul>
           </div>
-          <div class="total-income">
+          <div class="total-wrapper">
             <h2 class="total-name">
               Total income:
               <span id="totalIncomes"></span>
@@ -64,6 +55,32 @@
         </section>
         <section class="fill-tile">
           <h2 class="tiles-name">Expences</h2>
+          <form id="formExp" class="fill-area">
+            <input
+              id="inputTextExp"
+              class="text-input"
+              type="text"
+              placeholder="Expences name"
+              required />
+            <input
+              id="inputAmountExp"
+              class="amount-input"
+              type="number"
+              placeholder="Amount"
+              required
+              min="0.01"
+              step="0.01" />
+            <button class="amount-cto">Add</button>
+          </form>
+          <div id="listWrapperExp" class="list-wrapper">
+            <ul id="listExp" class="list-ul"></ul>
+          </div>
+          <div class="total-wrapper">
+            <h2 class="total-name">
+              Total expences:
+              <span id="totalExpences"></span>
+            </h2>
+          </div>
         </section>
       </section>
     </main>

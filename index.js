@@ -1,6 +1,5 @@
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
-// --- Dodanie elementów DOM, powiązanych z działaniem .js---
 const inputTextIncome = document.querySelector("#inputTextInc");
 const inputAmountIncome = document.querySelector("#inputAmountInc");
 const listWrapperIncome = document.querySelector("#listWrapperInc");
@@ -16,12 +15,8 @@ const formExpences = document.querySelector("#formExp");
 const totalExpences = document.querySelector("#totalExpences");
 const yourBudget = document.querySelector("#yourBudget");
 
-// ---tworzenie tablicy---
-
 const incomes = [];
 const expences = [];
-
-// funkcja sumująca przychody
 
 const getTotalIncomes = () => {
   return incomes.reduce((sum, current) => {
@@ -69,8 +64,6 @@ const updateBudgetMessage = () => {
   }
 };
 
-// ---funkcja dodająca element (obiekt-nazwę i wartość dochodu) do tablicy
-
 const addIncome = () => {
   const incomeObject = {
     id: uuidv4(),
@@ -88,24 +81,19 @@ const renderIncomesList = () => {
   incomesList.innerHTML = "";
   incomes.forEach((income) => {
     const incomeItem = document.createElement("li");
-    // ---dodajemy classę aby nowy element wyglądał tak jak zdefiniowaliśmy w css
     incomeItem.classList.add("list-item");
 
     const incomeItemName = document.createElement("span");
     incomeItemName.classList.add("name-style");
-    // --- uzupełnienie span'a tekstem ze zmiennej let textIncome ---
     incomeItemName.innerText = income.incomeName;
 
     const incomeItemAmount = document.createElement("span");
     incomeItemAmount.classList.add("amount-style");
-    // --- uzupełnienie span'a tekstem (liczbą) ze zmiennej let amountIncome ---
     incomeItemAmount.innerText = income.incomeAmount;
 
-    // --- utworzenie pojemnika na przyciski edit i delete , aby był ostylowany
     const optionsBtnsEdDe = document.createElement("div");
     optionsBtnsEdDe.classList.add("btnsOption");
 
-    // --- utworzenie pojemnika na przyciski save i cancel, aby był ostylowany
     const optionsBtnsSaCa = document.createElement("div");
     optionsBtnsSaCa.classList.add("btnsOption");
 
@@ -127,8 +115,6 @@ const renderIncomesList = () => {
       }
     });
 
-    // PRZYCISK EDYCJA + SAVE I CANCEL :
-
     const editBtnInc = document.createElement("button");
     editBtnInc.classList.add("item-cto");
     editBtnInc.innerText = "edit";
@@ -136,7 +122,6 @@ const renderIncomesList = () => {
       const editForm = document.createElement("form");
       editForm.classList.add("edit-form");
 
-      // edycja nazwy przychodu
       const editInputIncName = document.createElement("input");
       editInputIncName.placeholder = "edit income name";
       editInputIncName.value = income.incomeName;
@@ -144,7 +129,6 @@ const renderIncomesList = () => {
       editInputIncName.style.width = "140px";
       editInputIncName.style.height = "25px";
 
-      // edycja wartości przychodu
       const editInputIncAmount = document.createElement("input");
       editInputIncAmount.placeholder = "edit amount";
       editInputIncAmount.value = income.incomeAmount;
@@ -185,15 +169,12 @@ const renderIncomesList = () => {
       });
     });
 
-    // --- przypisanie treści span i przycisków do elementu listy li ---
-
     incomeItem.appendChild(incomeItemName);
     incomeItem.appendChild(incomeItemAmount);
     incomeItem.appendChild(optionsBtnsEdDe);
     optionsBtnsEdDe.appendChild(editBtnInc);
     optionsBtnsEdDe.appendChild(deleteBtnInc);
 
-    // --- przypisanie nowych elementów li do listy Ul w HTML ---
     incomesList.appendChild(incomeItem);
     listWrapperIncome.appendChild(incomesList);
   });
@@ -201,20 +182,12 @@ const renderIncomesList = () => {
   updateBudgetMessage();
 };
 
-// --- Funkcja obsługująca zdarzenie po naciśnięciu przycisku Add ---
-
 formIncome.addEventListener("submit", (event) => {
   event.preventDefault();
   addIncome();
 });
 
 renderIncomesList();
-
-// ---tworzenie tablicy---
-
-// funkcja sumująca przychody
-
-// ---funkcja dodająca element (obiekt-nazwę i wartość dochodu) do tablicy
 
 const addExpence = () => {
   const expenceObject = {
@@ -233,24 +206,19 @@ const renderExpencesList = () => {
   expencesList.innerHTML = "";
   expences.forEach((expence) => {
     const expenceItem = document.createElement("li");
-    // ---dodajemy classę aby nowy element wyglądał tak jak zdefiniowaliśmy w css
     expenceItem.classList.add("list-item");
 
     const expenceItemName = document.createElement("span");
     expenceItemName.classList.add("name-style");
-    // --- uzupełnienie span'a tekstem ze zmiennej let textExpence ---
     expenceItemName.innerText = expence.expenceName;
 
     const expenceItemAmount = document.createElement("span");
     expenceItemAmount.classList.add("amount-style");
-    // --- uzupełnienie span'a tekstem (liczbą) ze zmiennej let amountExpence ---
     expenceItemAmount.innerText = expence.expenceAmount;
 
-    // --- utworzenie pojemnika na przyciski edit i delete , aby był ostylowany
     const optionsBtnsEdDe = document.createElement("div");
     optionsBtnsEdDe.classList.add("btnsOption");
 
-    // --- utworzenie pojemnika na przyciski save i cancel, aby był ostylowany
     const optionsBtnsSaCa = document.createElement("div");
     optionsBtnsSaCa.classList.add("btnsOption");
 
@@ -272,8 +240,6 @@ const renderExpencesList = () => {
       }
     });
 
-    // PRZYCISK EDYCJA + SAVE I CANCEL :
-
     const editBtnExp = document.createElement("button");
     editBtnExp.classList.add("item-cto");
     editBtnExp.innerText = "edit";
@@ -281,7 +247,6 @@ const renderExpencesList = () => {
       const editForm = document.createElement("form");
       editForm.classList.add("edit-form");
 
-      // edycja nazwy przychodu
       const editInputExpName = document.createElement("input");
       editInputExpName.placeholder = "edit expence name";
       editInputExpName.value = expence.expenceName;
@@ -289,7 +254,6 @@ const renderExpencesList = () => {
       editInputExpName.style.width = "140px";
       editInputExpName.style.height = "25px";
 
-      // edycja wartości przychodu
       const editInputExpAmount = document.createElement("input");
       editInputExpAmount.placeholder = "edit amount";
       editInputExpAmount.value = expence.expenceAmount;
@@ -330,23 +294,18 @@ const renderExpencesList = () => {
       });
     });
 
-    // --- przypisanie treści span i przycisków do elementu listy li ---
-
     expenceItem.appendChild(expenceItemName);
     expenceItem.appendChild(expenceItemAmount);
     expenceItem.appendChild(optionsBtnsEdDe);
     optionsBtnsEdDe.appendChild(editBtnExp);
     optionsBtnsEdDe.appendChild(deleteBtnExp);
 
-    // --- przypisanie nowych elementów li do listy Ul w HTML ---
     expencesList.appendChild(expenceItem);
     listWrapperExpences.appendChild(expencesList);
   });
   updataTotalExpences();
   updateBudgetMessage();
 };
-
-// --- Funkcja obsługująca zdarzenie po naciśnięciu przycisku Add ---
 
 formExpences.addEventListener("submit", (event) => {
   event.preventDefault();

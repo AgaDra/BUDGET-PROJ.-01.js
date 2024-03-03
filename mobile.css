@@ -25,7 +25,7 @@
 
 .app-name {
   color: white;
-  font-size: 60px;
+  font-size: 50px;
   margin: 40px 0px 25px 0px;
 }
 
@@ -45,7 +45,6 @@
   margin: 20px;
   color: hsl(0, 100%, 100%);
 }
-/* ----FILL-TILES AREA---- */
 
 .fill-tiles {
   height: auto;

@@ -25,23 +25,23 @@
 
 .app-name {
   color: white;
-  font-size: 100px;
-  margin: 70px 0px 25px 0px;
+  font-size: 60px;
+  margin: 40px 0px 25px 0px;
 }
 
 .result-tile {
-  width: auto;
-  height: 150px;
+  width: 400px;
+  height: 100px;
   margin: 10px 10px;
   background-color: rgb(41, 41, 48, 0.8);
-  border-radius: 50px;
+  border-radius: 30px;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
 }
 
 .tiles-name {
-  font-size: 50px;
+  font-size: 25px;
   margin: 20px;
   color: hsl(0, 100%, 100%);
 }
@@ -56,11 +56,11 @@
 }
 
 .fill-tile {
-  width: 600px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
   margin: 10px 10px;
   background-color: rgb(41, 41, 48, 0.85);
-  border-radius: 60px;
+  border-radius: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,27 +73,27 @@
 }
 .edit-form {
   display: flex;
-  gap: 16px;
+  gap: 10px;
 }
 
 .text-input {
-  width: 250px;
-  height: 70px;
-  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  font-size: 15px;
   color: white;
   background-color: rgb(20, 20, 25);
   border: 1px solid gray;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 10px;
 }
 .amount-input {
-  width: 100px;
-  height: 70px;
-  font-size: 20px;
+  width: 80px;
+  height: 40px;
+  font-size: 15px;
   color: white;
   background-color: rgb(20, 20, 25);
   border: 1px solid grey;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 10px;
 }
 input::placeholder {
@@ -108,13 +108,13 @@ input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
 }
 .amount-cto {
-  width: 120px;
-  height: 70px;
-  font-size: 20px;
+  width: 80px;
+  height: 40px;
+  font-size: 15px;
   color: white;
   background-color: rgb(20, 20, 25);
   border: 0px;
-  border-radius: 20px;
+  border-radius: 15px;
   cursor: pointer;
   box-shadow: inset 5px 5px 8px rgba(83, 83, 84, 0.8),
     inset -7px -7px 10px rgba(0, 0, 0, 0.8);
@@ -142,23 +142,23 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .name-style {
   color: white;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .amount-style {
   color: white;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .btnsOption {
   display: flex;
-  gap: 5px;
+  gap: 3px;
 }
 
 .item-cto {
-  width: 55px;
-  height: 35px;
-  font-size: 15px;
+  width: 50px;
+  height: 25px;
+  font-size: 12px;
   color: white;
   background-color: rgb(20, 20, 25);
   border: 0px;
@@ -182,7 +182,7 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
 }
 .total-name {
-  font-size: 40px;
+  font-size: 20px;
   color: hsl(0, 100%, 100%);
 }
 

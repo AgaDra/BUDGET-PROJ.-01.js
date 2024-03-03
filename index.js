@@ -54,15 +54,18 @@ const updateBudgetMessage = () => {
   const budgetDifference = calculateBudget();
 
   if (budgetDifference > 0) {
-    yourBudget.textContent = `Możesz jeszcze wydać ${budgetDifference.toFixed(
+    yourBudget.textContent = `Możesz jeszcze wydać: ${budgetDifference.toFixed(
       2
     )} zł`;
+    yourBudget.style.color = "yellowgreen";
   } else if (budgetDifference === 0) {
-    yourBudget.textContent = "Bilans wynosi zero";
+    yourBudget.textContent = "Bilans wynosi: 0,00 zł";
+    yourBudget.style.color = "white";
   } else {
-    yourBudget.textContent = `Bilans jest ujemny. Jesteś na minusie ${Math.abs(
+    yourBudget.textContent = `Bilans jest ujemny. Jesteś na minusie: ${Math.abs(
       budgetDifference
     ).toFixed(2)} zł`;
+    yourBudget.style.color = "red";
   }
 };
 
@@ -111,7 +114,7 @@ const renderIncomesList = () => {
       "item-cto",
       "fa-regular",
       "fa-trash-can",
-      "fa-xl"
+      "fa-sm"
     );
 
     deleteBtnInc.addEventListener("click", () => {
@@ -138,6 +141,9 @@ const renderIncomesList = () => {
       editInputIncName.placeholder = "edit income name";
       editInputIncName.value = income.incomeName;
       editInputIncName.required = true;
+      editInputIncName.style.width = "140px";
+      editInputIncName.style.height = "25px";
+
       // edycja wartości przychodu
       const editInputIncAmount = document.createElement("input");
       editInputIncAmount.placeholder = "edit amount";
@@ -145,6 +151,8 @@ const renderIncomesList = () => {
       editInputIncAmount.required = true;
       editInputIncAmount.min = "0.01";
       editInputIncAmount.step = "0.01";
+      editInputIncAmount.style.width = "70px";
+      editInputIncAmount.style.height = "25px";
 
       incomeItem.innerHTML = "";
       editForm.appendChild(editInputIncName);
@@ -251,7 +259,7 @@ const renderExpencesList = () => {
       "item-cto",
       "fa-regular",
       "fa-trash-can",
-      "fa-xl"
+      "fa-sm"
     );
 
     deleteBtnExp.addEventListener("click", () => {
@@ -278,6 +286,9 @@ const renderExpencesList = () => {
       editInputExpName.placeholder = "edit expence name";
       editInputExpName.value = expence.expenceName;
       editInputExpName.required = true;
+      editInputExpName.style.width = "140px";
+      editInputExpName.style.height = "25px";
+
       // edycja wartości przychodu
       const editInputExpAmount = document.createElement("input");
       editInputExpAmount.placeholder = "edit amount";
@@ -285,6 +296,8 @@ const renderExpencesList = () => {
       editInputExpAmount.required = true;
       editInputExpAmount.min = "0.01";
       editInputExpAmount.step = "0.01";
+      editInputExpAmount.style.width = "70px";
+      editInputExpAmount.style.height = "25px";
 
       expenceItem.innerHTML = "";
       editForm.appendChild(editInputExpName);

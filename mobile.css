@@ -3,7 +3,9 @@
 }
 .background-image {
   position: relative;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
   margin: 0;
   background-image: url("/assets/bg-money.jpg");
   background-size: cover;
@@ -32,8 +34,8 @@
 .result-tile {
   width: 400px;
   height: 100px;
-  margin: 10px 10px;
-  background-color: rgb(41, 41, 48, 0.8);
+  margin: 10px;
+  background-color: rgba(41, 41, 48, 0.8);
   border-radius: 30px;
   display: flex;
   justify-content: center;
@@ -58,7 +60,7 @@
   width: 400px;
   height: 400px;
   margin: 10px 10px;
-  background-color: rgb(41, 41, 48, 0.85);
+  background-color: rgba(41, 41, 48, 0.8);
   border-radius: 40px;
   display: flex;
   flex-direction: column;
@@ -98,7 +100,7 @@
 input::placeholder {
   opacity: 0.4;
   color: gray;
-  padding: 10 px;
+  padding: 3px;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -138,20 +140,8 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.name-style {
   color: white;
   font-size: 18px;
-}
-
-.amount-style {
-  color: white;
-  font-size: 18px;
-}
-
-.btnsOption {
-  display: flex;
-  gap: 3px;
 }
 
 .item-cto {
@@ -186,12 +176,34 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .overlay {
-  position: absolute;
-  z-index: -1;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   background-color: #000000;
   opacity: 85%;
+  z-index: 100;
+}
+.content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  z-index: 200;
+}
+.icon-look {
+  color: #ffffff;
+  margin-top: 50px;
+}
+.edit-input-name {
+  width: 140px;
+  height: 25px;
+}
+
+.edit-input-amount {
+  width: 70px;
+  height: 25px;
 }

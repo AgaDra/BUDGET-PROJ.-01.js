@@ -84,11 +84,9 @@ const renderIncomesList = () => {
     incomeItem.classList.add("list-item");
 
     const incomeItemName = document.createElement("span");
-    incomeItemName.classList.add("name-style");
     incomeItemName.innerText = income.incomeName;
 
     const incomeItemAmount = document.createElement("span");
-    incomeItemAmount.classList.add("amount-style");
     incomeItemAmount.innerText = income.incomeAmount;
 
     const optionsBtnsEdDe = document.createElement("div");
@@ -123,20 +121,19 @@ const renderIncomesList = () => {
       editForm.classList.add("edit-form");
 
       const editInputIncName = document.createElement("input");
+      editInputIncName.classList.add("edit-input-name");
       editInputIncName.placeholder = "edit income name";
       editInputIncName.value = income.incomeName;
       editInputIncName.required = true;
-      editInputIncName.style.width = "140px";
-      editInputIncName.style.height = "25px";
 
       const editInputIncAmount = document.createElement("input");
+      editInputIncAmount.classList.add("edit-input-amount");
       editInputIncAmount.placeholder = "edit amount";
       editInputIncAmount.value = income.incomeAmount;
       editInputIncAmount.required = true;
+      editInputIncAmount.type = "number";
       editInputIncAmount.min = "0.01";
       editInputIncAmount.step = "0.01";
-      editInputIncAmount.style.width = "70px";
-      editInputIncAmount.style.height = "25px";
 
       incomeItem.innerHTML = "";
       editForm.appendChild(editInputIncName);
@@ -209,11 +206,9 @@ const renderExpencesList = () => {
     expenceItem.classList.add("list-item");
 
     const expenceItemName = document.createElement("span");
-    expenceItemName.classList.add("name-style");
     expenceItemName.innerText = expence.expenceName;
 
     const expenceItemAmount = document.createElement("span");
-    expenceItemAmount.classList.add("amount-style");
     expenceItemAmount.innerText = expence.expenceAmount;
 
     const optionsBtnsEdDe = document.createElement("div");
@@ -248,6 +243,7 @@ const renderExpencesList = () => {
       editForm.classList.add("edit-form");
 
       const editInputExpName = document.createElement("input");
+      editInputExpName.classList.add("edit-input-name");
       editInputExpName.placeholder = "edit expence name";
       editInputExpName.value = expence.expenceName;
       editInputExpName.required = true;
@@ -255,13 +251,13 @@ const renderExpencesList = () => {
       editInputExpName.style.height = "25px";
 
       const editInputExpAmount = document.createElement("input");
+      editInputExpAmount.classList.add("edit-input-amount");
       editInputExpAmount.placeholder = "edit amount";
       editInputExpAmount.value = expence.expenceAmount;
       editInputExpAmount.required = true;
+      editInputExpAmount.type = "number";
       editInputExpAmount.min = "0.01";
       editInputExpAmount.step = "0.01";
-      editInputExpAmount.style.width = "70px";
-      editInputExpAmount.style.height = "25px";
 
       expenceItem.innerHTML = "";
       editForm.appendChild(editInputExpName);
